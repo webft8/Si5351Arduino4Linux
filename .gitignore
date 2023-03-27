@@ -1,0 +1,5 @@
+.vscode/
+si5351_cli
+*.o
+*.a 
+*.so
