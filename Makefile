@@ -9,10 +9,10 @@ clean:
 	rm -f si5351_cli
 
 build: 
-	g++ -ggdb -std=c++11 -li2c -Wfatal-errors -Wall *.cpp -o ./si5351_cli
+	g++ -ggdb -std=c++11 -li2c -Wfatal-errors -Wall *.cpp -o ./si5351_cli -li2c
 
 build_debug: 
-	g++ -ggdb -std=c++11 -li2c -Wfatal-errors -Werror -Wall *.cpp -o ./si5351_cli -DSI5351_DEBUG -DSI5351_FATAL_ERRORS=1 '-DSI5351_ON_ERROR=throw 1; '
+	g++ -ggdb -std=c++11 -li2c -Wfatal-errors -Werror -Wall *.cpp -o ./si5351_cli -DSI5351_DEBUG -DSI5351_FATAL_ERRORS=1 '-DSI5351_ON_ERROR=throw 1; ' -li2c
 
 run:
 	./si5351_cli || true
